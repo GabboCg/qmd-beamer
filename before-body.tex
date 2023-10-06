@@ -1,5 +1,6 @@
 \usepackage{ragged2e}
 \usepackage{etoolbox}
+
 \apptocmd{\frame}{}{\justifying}{} 
 
 \setbeamertemplate{enumerate items}[default]
@@ -25,3 +26,8 @@
               \parsep    0\p@   \@plus\p@
               \itemsep   \parsep}
 \makeatother
+
+\usepackage{lipsum}
+
+\let\olditem\item
+\renewcommand\item{\olditem\justifying}
